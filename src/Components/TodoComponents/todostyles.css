@@ -1,0 +1,16 @@
+h1,
+li {
+  text-align: center;
+}
+.title {
+  width: 480px;
+  height: 72px;
+  border-radius: 12px;
+  border: solid 1px #e35800;
+  background-color: #ffe0cc;
+  font-size: 20px;
+}
+li {
+  list-style-type: none;
+  font-size: 18px;
+}

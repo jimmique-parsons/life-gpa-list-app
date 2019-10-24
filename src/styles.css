@@ -1,0 +1,111 @@
+.Desktop-Dashboard {
+  width: 1440px;
+  height: 1115px;
+}
+
+.Header {
+  width: 1440px;
+  height: 72px;
+  background-color: #fffbf9;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 1440px;
+  min-height: 954px;
+  display: flex;
+  background-color: #fffbf9;
+}
+
+.row {
+  display: flex;
+}
+
+.gpa-card {
+  width: 280px;
+  height: 280px;
+  border-radius: 12px;
+  border: solid 1px #909090;
+  background-color: #ffffff;
+  margin: 64px 40px 0px 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-results-button {
+  display: flex;
+  width: 25px;
+  margin: 0px 99px 8px 99px;
+  width: 83px;
+  height: 19px;
+  border: none;
+  background-color: #fff;
+}
+
+.progress-card {
+  width: 280px;
+  height: 280px;
+  border-radius: 12px;
+  border: solid 1px #909090;
+  background-color: #ffffff;
+  margin: 64px 40px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.streaks-card {
+  width: 280px;
+  height: 280px;
+  border-radius: 12px;
+  border: solid 1px #909090;
+  background-color: #ffffff;
+  margin: 64px 260px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.habit-card {
+  width: 280px;
+  height: 399px;
+  border-radius: 12px;
+  background-color: #969696;
+  margin: 107px 40px 105px 260px;
+}
+
+.goal-button {
+  width: 123px;
+  height: 48px;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #e1581b;
+  margin: 46px 356px 13px 380px;
+}
+
+.Footer {
+  width: 1440px;
+  height: 88px;
+  background-color: #474747;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+}
