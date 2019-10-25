@@ -1,7 +1,7 @@
 import React from "react";
 
-import Title from "/src/Components/CardComponents/CardStyles/CardTitleStyles.js";
-import Message from "/src/Components/CardComponents/ProgressCard/ProgressMessageStyles.js";
+import Title from "../CardStyles/CardTitleStyles.js";
+import Message from "../ProgressCard/ProgressMessageStyles.js";
 
 const StreaksCard = () => {
   return (

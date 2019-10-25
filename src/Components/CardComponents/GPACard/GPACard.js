@@ -2,7 +2,7 @@ import React from "react";
 
 import PieChart from "./GPAPieChart.js";
 
-import Title from "/src/Components/CardComponents/CardStyles/CardTitleStyles.js";
+import Title from "../CardStyles/CardTitleStyles.js";
 
 const GPACard = () => {
   return (
