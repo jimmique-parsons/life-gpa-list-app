@@ -8,98 +8,89 @@ import {
   Button
 } from "react-bootstrap";
 
-//create a class for displaying the modal for adding a new goal and export it
+//create a class for displaying the modal for adding a new recipe and export it
 export class AddGoal extends React.Component {
   constructor(props) {
-    //create a state to handle the new goal
+    //create a state to handle the new recipe
     super(props);
-    this.state = { name: "", categories: "" };
-    this.handleGoalNameChange = this.handleGoalNameChange.bind(this);
-    this.handleGoalCategoriesChange = this.handleGoalCategoriesChange.bind(
+    this.state = { name: "", ingredients: "" };
+    this.handleRecipeNameChange = this.handleRecipeNameChange.bind(this);
+    this.handleRecipeIngredientsChange = this.handleRecipeIngredientsChange.bind(
       this
     );
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
   }
-  handleGoalNameChange(e) {
+  handleRecipeNameChange(e) {
     //change the name to reflect user input
     this.setState({ name: e.target.value });
   }
-  handleGoalCategoriesChange(e) {
-    //change the category to reflect user input
-    this.setState({ categories: e.target.value });
+  handleRecipeIngredientsChange(e) {
+    //change the ingredients to reflect user input
+    this.setState({ ingredients: e.target.value });
   }
   handleSubmit(e) {
-    //get the goal data, manipulate it and call the function for creating a new goal
+    //get the recipe data, manipulate it and call the function for creating a new recipe
     e.preventDefault();
     const onAdd = this.props.onAdd;
     const regExp = /\s*,\s*/;
     var newName = this.state.name;
-    var newCategories = this.state.categories.split(regExp);
-    var newGoal = { name: newName, categories: newCategories };
-    onAdd(newGoal);
-    this.setState({ name: "", categories: "" });
+    var newIngredients = this.state.ingredients.split(regExp);
+    var newRecipe = { name: newName, ingredients: newIngredients };
+    onAdd(newRecipe);
+    this.setState({ name: "", ingredients: "" });
   }
   handleCancel() {
     const onAddModal = this.props.onAddModal;
-    this.setState({ name: "", categories: "" });
+    this.setState({ name: "", ingredients: "" });
     onAddModal();
   }
-  onClose = e => {
-    this.props.onClose && this.props.onClose(e);
-  };
-
   render() {
     const onShow = this.props.onShow;
     var regex1 = /^\S/;
     var regex2 = /^[^,\s]/;
     var regex3 = /[^,\s]$/;
-    const validGoal =
+    const validRecipe =
       regex1.test(this.state.name) &&
-      regex2.test(this.state.categories) &&
-      regex3.test(this.state.categories);
-    if (!this.props.show) {
-      return null;
-    }
+      regex2.test(this.state.ingredients) &&
+      regex3.test(this.state.ingredients);
     return (
       <Modal show={onShow} onHide={this.handleCancel}>
-        <Modal.Header>
-          <button
-            onClick={e => {
-              this.onClose(e);
-            }}
-          >
-            Return to Dashbord
-          </button>
-          <Modal.Title>Add a Goal</Modal.Title>
-        </Modal.Header>
+        <Modal.Header closeButton />
         <Modal.Body>
-          <FormGroup controlId="formControlsCategories">
+          <Modal.Title>New Recipe</Modal.Title>
+          <FormGroup controlId="formControlsIngredients">
             <ControlLabel>Life Areas</ControlLabel>
+            <select
+              value={this.state.ingredients}
+              onChange={this.handleRecipeIngredientsChange}
+            >
+              <option placeholder="Select a Category">Select a Category</option>
+              <option value="health">Health</option>
+              <option value="career">Career</option>
+              <option value="social">Social</option>
+              <option value="personal development">Personal Development</option>
+              <option value="recreation">Recreation</option>
+              <option value="family">Family</option>
+              <option value="life planning">Life Planning</option>
+              <option value="spirituality">Spirituality</option>
+            </select>
+          </FormGroup>
+          <FormGroup controlId="formControlsName">
+            <ControlLabel>Goal</ControlLabel>
             <FormControl
               componentClass="textarea"
               type="text"
               required
-              onChange={this.handleGoalCategoriesChange}
-              value={this.state.catgories}
-              placeholder="Select a Category"
-            />
-          </FormGroup>
-          <FormGroup controlId="formControlsGoal">
-            <ControlLabel>Goal</ControlLabel>
-            <FormControl
-              type="text"
-              required
-              onChange={this.handleGoalNameChange}
+              onChange={this.handleRecipeNameChange}
               value={this.state.name}
-              placeholder="Create a habit or long term goal and choose what days you'd like to
-              work towards it."
+              placeholder="Enter Goal"
             />
           </FormGroup>
         </Modal.Body>
         <Modal.Footer>
           <Button
-            disabled={!validGoal}
+            disabled={!validRecipe}
             bsStyle="success"
             onClick={this.handleSubmit}
           >
@@ -110,5 +101,3 @@ export class AddGoal extends React.Component {
     );
   }
 }
-
-export default AddGoal;

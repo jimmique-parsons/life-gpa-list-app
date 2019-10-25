@@ -7,12 +7,8 @@ const ProgressCard = () => {
   return (
     <div className="progress-card">
       <Title>Daily Progress</Title>
-      <Message>Keep it Going</Message>
-      <button
-        className="card-results-counter"
-        //onClick=""
-        value="2 out of 5 goals complete"
-      />
+      <Message>Keep it going!</Message>
+      <p className="card-results-counter">2 out of 5 goals complete</p>
     </div>
   );
 };

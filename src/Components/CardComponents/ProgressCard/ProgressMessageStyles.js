@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.h2`
   width: 195px;
   height: 38px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;

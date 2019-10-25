@@ -10,7 +10,7 @@
 }
 
 .App {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   width: 1440px;
   min-height: 954px;
@@ -35,9 +35,8 @@
 
 .card-results-button {
   display: flex;
-  width: 25px;
   margin: 0px 99px 8px 99px;
-  width: 83px;
+  width: 96px;
   height: 19px;
   border: none;
   background-color: #fff;
@@ -54,6 +53,20 @@
   flex-direction: column;
 }
 
+.card-results-counter {
+  width: 150px;
+  height: 54px;
+  font-family: "OpenSans" sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin: 10px 71px 76px 71px;
+}
+
 .streaks-card {
   width: 280px;
   height: 280px;
@@ -65,12 +78,40 @@
   flex-direction: column;
 }
 
+.streaks-note {
+  width: 248px;
+  height: 54px;
+  font-family: "OpenSans" sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin: 10px 16px 76px 16px;
+}
+
 .habit-card {
   width: 280px;
   height: 399px;
+  text-align: left;
   border-radius: 12px;
-  background-color: #969696;
+  background-color: #fffbf9;
   margin: 107px 40px 105px 260px;
+}
+
+.habit-text {
+  margin-left: 16px;
+}
+
+.history-button {
+  width: 116px;
+  height: 40px;
+  margin-left: 16px;
+  border-radius: 6px;
+  background-color: #fffbf9;
+  border: 1px solid #393939;
 }
 
 .goal-button {
@@ -81,6 +122,38 @@
   color: #fff;
   background-color: #e1581b;
   margin: 46px 356px 13px 380px;
+}
+
+.goal-button:hover {
+  color: #e1581b;
+  background-color: #fff;
+  border: 1px solid #e1581b;
+}
+
+.panel-heading {
+  width: 496px;
+  background-color: #fffbf9;
+}
+
+.panel-title {
+  padding: 20px 0px 20px 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: inherit;
+  text-align: left;
+}
+
+.panel-default > .panel-heading {
+  background-color: #fffbf9;
+  border-color: #fffbf9;
+}
+
+.panel {
+  border: 1px solid #fffbf9;
+  background-color: #fffbf9;
+  box-shadow: none;
+  width: 498px;
 }
 
 .Footer {

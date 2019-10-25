@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.h1`
-  width: 120px;
+  width: 130px;
   height: 22px;
   font-size: 16px;
   font-weight: 600;
