@@ -7,10 +7,12 @@ import {
   ListGroup,
   ListGroupItem
 } from "react-bootstrap";
-import "./todostyles.css";
 
 import { AddGoal } from "./AddGoal.js";
 import { EditGoal } from "./EditGoal.js";
+
+import "./todostyles.css";
+import "./AddGoalButton.css";
 
 //create the main class for displaying the goals
 class Goal extends React.Component {
@@ -103,6 +105,7 @@ class Goal extends React.Component {
               <Panel.Heading>
                 <Panel.Title className="title" toggle>
                   {recipe.name}
+                  <div />
                 </Panel.Title>
               </Panel.Heading>
               <Panel.Body collapsible>

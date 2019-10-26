@@ -1,6 +1,7 @@
 import React from "react";
 
 import PieChart from "./GPAPieChart.js";
+import ResultsButton from "./ResultsButton.js";
 
 import Title from "../CardStyles/CardTitleStyles.js";
 
@@ -11,12 +12,9 @@ const GPACard = () => {
       <div>
         <PieChart />
       </div>
-      <input
-        className="card-results-button"
-        type="button"
-        //onClick=""
-        value="View Results"
-      />
+      <div>
+        <ResultsButton />
+      </div>
     </div>
   );
 };
